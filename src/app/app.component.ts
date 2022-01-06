@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'propertybinding-example1';
+
+  image = '/assets/images/marvel.jpeg';
+  imgWidth = 500;
+  imgHeight = 500;
+
+  color = 'blue';
+
+  styles = {
+    color: 'indianred',
+    fontSize: '25px',
+    opacity: 0.7,
+    textAlign: 'center'
+  };
+
+  animal = {
+    name: 'Lion',
+    image: './assets/images/lion.jpeg'
+  };
+
+  isDisabled: boolean = true;
+  val: number = 1000000;
 }
