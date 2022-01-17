@@ -13,6 +13,10 @@ export class AppComponent {
 
   color = 'blue';
 
+  myId = 'heading';
+
+  inputValue = 'Santosh';
+
   styles = {
     color: 'indianred',
     fontSize: '25px',
@@ -27,4 +31,9 @@ export class AppComponent {
 
   isDisabled: boolean = true;
   val: number = 1000000;
+
+  hasError: boolean = false;
+
+  fontSize = '25px';
+  opacity = 0.7;
 }

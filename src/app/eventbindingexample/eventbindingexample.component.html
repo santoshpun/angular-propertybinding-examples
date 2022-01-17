@@ -1,0 +1,28 @@
+<p>
+    <button (click)="onSave()">Save</button>
+</p>
+
+<div class="row">
+    <div class="col-sm-12">
+        <label for="username" class="col-form-label">Username:</label>
+        <input type="text" class="form-control" (input)="updateName($event)" id="username" autocomplete="off">
+    </div>
+    <p>{{ username }}</p>
+</div>
+
+<p>
+    Click event:
+    <button (click)="name='Santosh'">Set Name</button>
+    {{name}}
+</p>
+
+<p>
+    Keydown event:
+    <input (keydown)="eventName='Key Down'">  
+    {{eventName}}
+</p>
+
+<p>
+    Change event:
+    <input (change) = "changeText($event.target.value)" type="text">  
+</p>

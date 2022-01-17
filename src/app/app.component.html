@@ -1,5 +1,5 @@
 <style type="text/css">
-  .red{
+  .red {
     color: red;
     font-size: 20;
     font-weight: bold;
@@ -8,28 +8,57 @@
 <div class="container">
 
   <div class="row">
-    
+
+    <h2 [style.color]="'orange'">Heading 2</h2>
+
+    <h2 [style.color]="hasError ? 'red' : 'green'">Heading 2</h2>
+
     <div class="col-sm">
       <img [src]="image" alt="Marvel characters" [width]="imgWidth" [height]="imgHeight" />
     </div>
-    
+
     <div class="col-sm">
+
+      <h1 [style.color]="color" [style.font-size]="fontSize" [style.opacity]="opacity">Important Notice !</h1>
+
+      <p [id]="myId">Paragraph</p>
+
+      <input [id]="myId" type="text" [value]="inputValue" />
+
       <h1 [ngStyle]="styles">Superheros are ready to save the world!!</h1>
+
       <button [disabled]="isDisabled" [ngClass]="'btn btn-primary'">Disabled button</button>
+
       <p [style.color]="color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta delectus, natus ad
         nesciunt
         reiciendis aliquid dolore adipisci quasi, obcaecati enim, molestias ab neque
         laudantium dolorem atque deleniti aspernatur veniam hic.</p>
     </div>
-    
+
     <div class="col-sm">
       <h1 [style.color]="color">Let's make a peace</h1>
+
       <img [alt]="animal.name" [src]="animal.image" width="400" height="300" />
+
       <p [ngClass]="'first second'">This a sample text</p>
+
       <p [ngClass]="val > 10 ? 'red' : 'green'">{{ val }}</p>
+
     </div>
-  
+
+    <div>
+      #Template reference variable
+      <label>Enter Your Name</label>
+      <input (keyup)="0" #name>
+      <p>Welcome {{name.value}} </p>
+    </div>
   </div>
 
+  <h1>Interpolation examples</h1>
 
+  <app-interpolationexample></app-interpolationexample>
+
+  <h1>Event binding examples</h1>
+
+  <app-eventbindingexample></app-eventbindingexample>
 </div>
